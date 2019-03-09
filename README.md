@@ -1,4 +1,4 @@
-# This will be the next CS1 project
+# CS1 Intergalactic Space Unit
 ____
 
 ## Overview
