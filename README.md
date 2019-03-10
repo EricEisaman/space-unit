@@ -1,6 +1,20 @@
 # CS1 Intergalactic Space Unit
 ____
 
+## Quick Start (Detailed Instructions to Come)
+
+🍎 Remix this project.
+
+🍎 Add an **ADMIN_KEY** in **.env**
+
+🍎 For the admin account, login with admin and your ADMIN_KEY.
+
+🍎 Add additional accounts through the client console.
+```js
+CS1.socket.emit('add-user',{key:[ADMIN_KEY],name:[new username],pw:[new user pw]})
+```
+
+
 ## Overview
 
 🍎 Based upon [A-Frame version 0.9](https://aframe.io/docs/0.9.0/introduction/).
