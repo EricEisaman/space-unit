@@ -2,7 +2,10 @@ export default CS1=>{AFRAME.registerComponent("collectible", {
 	schema: {
     threshold: {type: 'number', default: 2.7},
     soundCollect: {type: 'string',default:'https://cdn.glitch.com/f8abb766-9950-44ff-9adb-2f5f53fdaf1b%2Fpowerup_1.mp3?1552158629039'},
-    soundLoop: {}
+    soundLoop: {},
+    cb:{type:'string',default:''},
+    affects:{type:'string',default:''},
+    value:{type:'number',default:1}
 	},
 	init: function()
 	{
@@ -21,13 +24,18 @@ export default CS1=>{AFRAME.registerComponent("collectible", {
       let collectedEntity = CS1.collectibles[data.index];
       if(collectedEntity.el.components.sound__loop)collectedEntity.el.components.sound__loop.pause();
       collectedEntity.el.setAttribute('visible',false);
+      collectedEntity.el.setAttribute('scale','0 0 0');
       collectedEntity.soundIsPlaying=true;
       collectedEntity.el.components.sound__collect.playSound();
+      if(collectedEntity.data.cb){
+        CS1.game[collectedEntity.data.cb](collectedEntity.el);
+      }
       collectedEntity.el.addEventListener('sound-ended',e=>{
+        collectedEntity.soundIsPlaying=false;
         collectedEntity.pause();     
       });
-      if(data.collector==CS1.socket.id){
-        CS1.hud.pointsDial.animateTo(CS1.hud.pointsDial.value+5);
+      if(data.collector==CS1.socket.id && collectedEntity.data.affects){        
+        CS1.hud[collectedEntity.data.affects].changeBy(collectedEntity.data.value);
       }
     });
   }, 
@@ -44,10 +52,14 @@ export default CS1=>{AFRAME.registerComponent("collectible", {
     if(CS1.socket.disconnected){
       if(this.el.components.sound__loop)this.el.components.sound__loop.pause();
       this.el.setAttribute('visible',false);
+      this.el.setAttribute('scale','0 0 0');
       this.soundIsPlaying=true;
       this.el.components.sound__collect.playSound();
-      CS1.hud.pointsDial.animateTo(CS1.hud.pointsDial.value+5);
+      if(this.data.cb)CS1.game[this.data.cb](this.el);
+      if(this.data.affects)
+        CS1.hud[this.data.affects].animateTo(CS1.hud[this.data.affects].value+this.data.value);
       this.el.addEventListener('sound-ended',e=>{
+        this.soundIsPlaying=false;
         this.pause();   
       }); 
     } else{
