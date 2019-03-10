@@ -47,7 +47,7 @@ export default {
  },
  sounds:{
   playerJoined: {url:'https://cdn.glitch.com/4078275e-b39c-4ca4-9c8e-8135faedcd7c%2Fspace_welcome.mp3?1552104028949'},
-  playerLeft: {url:'https://cdn.glitch.com/7f007e49-e78d-40b6-964d-097554282381%2Ffarewell.mp3?1545526194837'},
+  playerLeft: {url:'https://cdn.glitch.com/4078275e-b39c-4ca4-9c8e-8135faedcd7c%2Fspace_hatch.mp3?1552161192721'},
   yay: {url:'https://cdn.glitch.com/162b879e-fd42-40d9-8519-671d783b8c70%2Fyay.mp3?1538839840045',loop:false,volume:0.8},
   splashIn: {url:'https://cdn.glitch.com/b10e1289-ada6-412c-a444-83b2ee39c4a0%2FsplashIn.mp3?1544623314600',loop:false,volume:0.8},
   splashOut: {url:'https://cdn.glitch.com/b10e1289-ada6-412c-a444-83b2ee39c4a0%2FsplashOut.mp3?1544623312237',loop:false,volume:0.8},

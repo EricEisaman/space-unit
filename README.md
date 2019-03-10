@@ -26,9 +26,10 @@ ____
 - Online collection
 
 🍎 [A-Frame Effects](https://github.com/wizgrav/aframe-effects)
-- bloom
+- [bloom](https://en.wikipedia.org/wiki/Bloom_(shader_effect))
 - glitch
-- godrays
+- [godrays](https://en.wikipedia.org/wiki/Crepuscular_rays)
+- [fxaa](https://en.wikipedia.org/wiki/Fast_approximate_anti-aliasing)
 
 🍎 Particles System
 - JSON particles bundling (TODO)
