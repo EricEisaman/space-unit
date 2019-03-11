@@ -1,12 +1,12 @@
 {
-  "name": "ELHS CS1",
+  "name": "Space Station",
   "short_name": "CS1",
-  "description": "ELHS Computer Science",
+  "description": "Computer Science Learning Project",
   "icons": [
     {
       "sizes": "192x192",
       "type": "image/png",
-      "src": "https://cdn.glitch.com/9ad2ae7c-3f18-45f2-8917-4e675bd381da%2Feddies_192.png?1549770718530"
+      "src": "https://cdn.glitch.com/4078275e-b39c-4ca4-9c8e-8135faedcd7c%2Fspace_station_192.png?1552299795047"
     },
     {
       "sizes": "512x512",
@@ -17,6 +17,6 @@
   "display": "fullscreen",
   "orientation":"landscape",
   "background_color": "white",
-  "theme_color": "maroon",
+  "theme_color": "gray",
   "start_url": "/index.html"
 }
