@@ -1,6 +1,6 @@
 {
   "name": "Space Station",
-  "short_name": "CS1",
+  "short_name": "Space",
   "description": "Computer Science Learning Project",
   "icons": [
     {
@@ -11,7 +11,7 @@
     {
       "sizes": "512x512",
       "type": "image/png",
-      "src": "https://cdn.glitch.com/9ad2ae7c-3f18-45f2-8917-4e675bd381da%2Feddies_512.png?1549770721365"
+      "src": "https://cdn.glitch.com/4078275e-b39c-4ca4-9c8e-8135faedcd7c%2Fspace_station_512.png?1552300574342"
     }
   ],
   "display": "fullscreen",
